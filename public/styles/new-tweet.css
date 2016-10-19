@@ -1,0 +1,108 @@
+
+h2 {
+  margin: 0;
+}
+
+h2:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+.new-tweet {
+  padding: 1em 2em;
+  border: 1px solid gray;
+  background-color: #eee;
+  border-radius: 10px;
+  margin: 0 2em 20px;
+
+}
+
+textarea {
+ width: 100%;
+}
+
+.counter {
+  float: right;
+}
+
+
+#oldTweets {
+  padding: 1em 2em;
+}
+
+article {
+  margin: 0;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 0;
+}
+
+article header {
+  width: 100%;
+  height: 70px;
+  padding: 0.25em;
+  margin-bottom: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #eee;
+  color: gray;
+}
+
+
+.logo {
+    width: 55px;
+    height: 55px;
+    line-height: 70px;
+    margin-right: 10px;
+    border-radius: 10px;
+    float: left;
+}
+
+#username {
+  line-height: 70px;
+  font-size: 16px;
+  font-size: 2em;
+  font-weight: bold;
+  color: gray;
+}
+
+#handle {
+  float: right;
+  font-size: 16px;
+  color: gray;
+}
+
+
+#timestamp {
+  width: 100;
+   height: 40px;
+   padding: 10px;
+   text-align: left;
+   color: gray;
+   border-top: 1px solid gray;
+   margin-top: 10px;
+}
+.tweettext {
+  position: relative;
+  padding: 0.5em;
+  /*padding-right: 2em;
+  padding-left: 2em;*/
+}
+
+#oldTweets .glyphicon {
+    float:right;
+    margin-right: 10px;
+    color: pink;
+    visibility: hidden;
+  }
+
+#oldTweets article:hover .glyphicon {
+  visibility: visible;
+}
+
+
+
+
