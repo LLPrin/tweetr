@@ -1,14 +1,8 @@
 
 h2 {
-  margin: 0;
-}
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid black;
 
-h2:after {
-    content:"";
-    display: inline-block;
-    height: 0.5em;
-    width: 100%;
-    border-top: 1px solid black;
 }
 
 .new-tweet {
@@ -17,30 +11,29 @@ h2:after {
   background-color: #eee;
   border-radius: 10px;
   margin: 0 2em 20px;
-
 }
 
 textarea {
- width: 100%;
+  width: 100%;
 }
 
 .counter {
   float: right;
 }
 
-
 #oldTweets {
   padding: 1em 2em;
 }
 
-article {
+.tweet {
   margin: 0;
   border: 1px solid gray;
   border-radius: 10px;
   padding: 0;
+  margin-bottom: 20px;
 }
 
-article header {
+.tweet header {
   width: 100%;
   height: 70px;
   padding: 0.25em;
@@ -52,40 +45,41 @@ article header {
 }
 
 
-.logo {
-    width: 55px;
-    height: 55px;
-    line-height: 70px;
-    margin-right: 10px;
-    border-radius: 10px;
-    float: left;
+.tweet .logo {
+  width: 55px;
+  height: 55px;
+  line-height: 70px;
+  margin-right: 10px;
+  border-radius: 10px;
+  float: left;
 }
 
-#username {
+.tweet .username {
   line-height: 70px;
-  font-size: 16px;
   font-size: 2em;
   font-weight: bold;
   color: gray;
 }
 
-#handle {
+.tweet .handle {
   float: right;
+  margin: 10px 10px;
   font-size: 16px;
   color: gray;
 }
 
 
-#timestamp {
+.tweet .timestamp {
   width: 100;
-   height: 40px;
-   padding: 10px;
-   text-align: left;
-   color: gray;
-   border-top: 1px solid gray;
-   margin-top: 10px;
+  height: 40px;
+  padding: 10px;
+  text-align: left;
+  color: gray;
+  border-top: 1px solid gray;
+  margin-top: 10px;
 }
-.tweettext {
+
+.tweet .tweettext {
   position: relative;
   padding: 0.5em;
   /*padding-right: 2em;
@@ -93,16 +87,12 @@ article header {
 }
 
 #oldTweets .glyphicon {
-    float:right;
-    margin-right: 10px;
-    color: pink;
-    visibility: hidden;
-  }
-
-#oldTweets article:hover .glyphicon {
-  visibility: visible;
+  float:right;
+  margin-right: 10px;
+  color: #f442d4;
+  visibility: hidden;
 }
 
-
-
-
+#oldTweets .tweet:hover .glyphicon {
+  visibility: visible;
+}
