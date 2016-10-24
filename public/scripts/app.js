@@ -53,21 +53,23 @@ $(function() {
   $(':input:submit').on('click', function(event) {
     event.preventDefault();
     let data = $("[name='text']").serialize();
-      if (data.length > 140) {
-        alert('Your tweet must be below 140 characters.')
-      } else {
-        $.ajax({
-          url: '/tweets',
-          method: 'POST',
-          data: $( "[name='text']" ).serialize(),
-          }).then(function successCb(data) {
-            // console.log('data from server resp', data);
-              window.location.reload(true);
-            }, function errorCb(err) {
-              alert('Cannot post empty text.')
-              console.error(err);
-            });
-      }
+    if (data.length > 140) {
+      alert('Your tweet must be below 140 characters.')
+    } else {
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $( "[name='text']" ).serialize(),
+      }).then(function successCb(data) {
+        console.log("post was successful");
+        // console.log('data from server resp', data);
+        // window.location.reload(true);
+        loadTweets();
+      }, function errorCb(err) {
+        alert('Cannot post empty text.')
+        console.error(err);
+      });
+    }
   });
 
   function loadTweets(){
@@ -77,9 +79,9 @@ $(function() {
       url: '/tweets',
       method: 'GET'
     }).then(function successCb(data) {
-      // console.log('data from server resp', data);
+      console.log('data from server resp', data);
       renderTweets(data);
-      }, function errorCb(err) {
+    }, function errorCb(err) {
       console.error(err);
     });
   }
