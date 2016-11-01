@@ -25,32 +25,20 @@ module.exports = {
           // return true;
           // Really good devs would have a callback here to handle errors (and handle success by doing nothing)
         },
-
         getTweets: (callback) => {
-          // db.collection('tweets').find().toArray((err, arg)=>{
-          //   console.log("I am a toArray callback, and here's my arg: ", arg)
-          // })
+
           db.collection('tweets').find().toArray(callback);
           // return db.tweets.sort(function(a, b) { return a.created_at - b.created_at });  // good idea, but not strictly necessary
         }
-
       };
-
       onConnect(dbMethods);
-
     });
   }
-
 }
 
 
 // module.exports = {
-
 //   connect: (onConnect) => {
-
 //     onConnect(dbMethods);
-
 //   }
-
-
 // }

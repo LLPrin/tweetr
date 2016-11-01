@@ -11,7 +11,7 @@ $(function() {
   function renderTweets(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container\
+    // takes return value and appends it to the tweets container
     var rawTweetData = '';
     for (let user of tweets ) {
       rawTweetData = createTweetElement(user) + rawTweetData;
@@ -62,8 +62,6 @@ $(function() {
         data: $( "[name='text']" ).serialize(),
       }).then(function successCb(data) {
         console.log("post was successful");
-        // console.log('data from server resp', data);
-        // window.location.reload(true);
         loadTweets();
       }, function errorCb(err) {
         alert('Cannot post empty text.')
@@ -73,7 +71,6 @@ $(function() {
   });
 
   function loadTweets(){
-    // console.log('ive been called!');
     $.ajax({
       //handling JSON response instead.
       url: '/tweets',
@@ -106,14 +103,3 @@ $(function() {
   })
 
 });
-
-
-
-// var $tweet = createTweetElement(tweetData);
-
-
-
-// // Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-// $('#oldTweets').append($tweet);
-
