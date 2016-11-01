@@ -82,8 +82,6 @@ textarea {
 .tweet .tweettext {
   position: relative;
   padding: 0.5em;
-  /*padding-right: 2em;
-  padding-left: 2em;*/
 }
 
 #oldTweets .glyphicon {

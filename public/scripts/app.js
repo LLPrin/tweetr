@@ -31,18 +31,18 @@ $(function() {
 
     return `
       <article class="tweet">
-            <header>
-              <img class="logo" src="${tweet.user.avatars.small}">
-              <span class="username">${tweet.user.name}</span>
-              <span class="handle">${tweet.user.handle}</span>
-            </header>
-            <p class="tweettext">${escape(tweet.content.text)}</p>
-            <footer class="timestamp">
-              ${tweet.created_at}
-              <span class="glyphicon glyphicon-heart-empty"></span>
-              <span class="glyphicon glyphicon-refresh"></span>
-              <span class="glyphicon glyphicon-flag"></span>
-            </footer>
+        <header>
+          <img class="logo" src="${tweet.user.avatars.small}">
+          <span class="username">${tweet.user.name}</span>
+          <span class="handle">${tweet.user.handle}</span>
+        </header>
+        <p class="tweettext">${escape(tweet.content.text)}</p>
+        <footer class="timestamp">
+          ${tweet.created_at}
+          <span class="glyphicon glyphicon-heart-empty"></span>
+          <span class="glyphicon glyphicon-refresh"></span>
+          <span class="glyphicon glyphicon-flag"></span>
+        </footer>
       </article>
       `;
   }

@@ -17,18 +17,15 @@ module.exports = {
         throw err;
       }
 
-
       const dbMethods = {
 
         saveTweet: (data) => {
           db.collection('tweets').insertOne(data);
-          // return true;
-          // Really good devs would have a callback here to handle errors (and handle success by doing nothing)
+          // When REFACTORING: include error callback to handle errors
         },
         getTweets: (callback) => {
 
           db.collection('tweets').find().toArray(callback);
-          // return db.tweets.sort(function(a, b) { return a.created_at - b.created_at });  // good idea, but not strictly necessary
         }
       };
       onConnect(dbMethods);
@@ -36,7 +33,7 @@ module.exports = {
   }
 }
 
-
+// THIS WAS THE HINT THAT SAVED OUR LIVES!!!
 // module.exports = {
 //   connect: (onConnect) => {
 //     onConnect(dbMethods);
